@@ -21,6 +21,7 @@
 
 <table>
 	<tr>
+		<th>ID</th>
 		<th>Name</th>
 		<th>Price</th>
 		<th>Category</th>
@@ -28,6 +29,7 @@
 
 	<% @ordered_products.each do |product| %>
 		<tr>
+			<td><%= product.id %></td>
 			<td><%= link_to product.name, one_product_path(id: product.id) %></td>
 			<td><%= number_to_currency product.price %></td>
 			<td><%= link_to product.category, by_category_path(category: product.category) %></td>
